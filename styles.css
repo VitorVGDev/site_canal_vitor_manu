@@ -60,7 +60,15 @@ nav>a{
 }
 
 nav>a:hover{
-    border-bottom: 1px solid #FFD580;
+    color: rgb(54, 36, 9);
+}
+
+#smith_plays{
+    transition: 0.3s;
+}
+
+#smith_plays:hover{
+    transform: scale(1.1);
 }
 
 body{
@@ -78,12 +86,13 @@ header>h1{
     font-style: normal;
 }
 
-#container_principal{
+#container_sobreNos{
     /*Posições e dimensões*/
     justify-content: center;
-    height: max-content;
-    width: 40vh;
+    height: 60vh;
+    width: 30vh;
     padding: 10px;
+    padding-bottom: 0px;
     position: absolute;
     top: 20%;
     right: 10px;
@@ -106,13 +115,19 @@ header>h1{
     color: antiquewhite;
 }
 
-#container_principal>h1{
+#container_sobreNos>h1{
     color: #FFD580;
     font-size: 30px;
     text-align: center;
+    transition: 0.3s;
 }
 
-#container_principal>p{
+#container_sobreNos>h1:hover{
+    color: rgb(54, 36, 9);
+    filter: drop-shadow(0 0 5px #FFD580);
+}
+
+#container_sobreNos>p{
     padding-top: 10px;
     color: antiquewhite;
     font-size: 20px;
@@ -130,7 +145,7 @@ header>h1{
 #luffy::after {
     content: "Olá, Smither!";
     position: absolute;
-    bottom: 110%; /* Ajuste conforme necessário */
+    bottom: 100%; /* Distância entre o texto e o Luffy*/
     left: 50%;
     transform: translateX(-50%);
     background-color: #FFD580;
@@ -146,4 +161,45 @@ header>h1{
 #luffy:hover::after {
     opacity: 1;
     visibility: visible;
+}
+
+#icons{
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#icons>box-icon{
+    margin-right: -5px;
+}
+
+a>box-icon{
+    color: #FFD580;
+    transition: 0.1s;
+}
+
+a>box-icon:hover{
+    transform: scale(1.1);
+}
+
+#container_principal{
+    /*Posições e dimensões*/
+    justify-content: center;
+    height: 59vh;
+    width: 160vh;
+    padding: 10px;
+    margin-right: 10px;
+    position: absolute;
+    top: 20%;
+    left: 10px;
+
+    /*Estilo*/
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    border: 2px dotted #FFD580;
+    
 }
